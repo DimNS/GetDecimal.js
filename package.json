@@ -1,7 +1,7 @@
 {
   "name": "getdecimal",
   "description": "Javascript converter of the specified string in a decimal number with a given precision",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/DimNS/getDecimal.js",
   "author": "DimNS <dimns@dimns.ru>",
   "keywords": [

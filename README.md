@@ -1,36 +1,40 @@
-# isEmpty.js
+# getDecimal.js
 
-### **`isEmpty(value)`**
-Check for empty value (null, undefined, number, string, object or array).
+### **`getDecimal(value, precision)`**
+Javascript converter of the specified string in a decimal number with a given precision
 
 ## Install
 ```bash
-npm i dimns-is-empty-js
+npm i getdecimal
 ```
 
 ## Usage
 ```html
-<script type="text/javascript" src="dist/isEmpty.min.js">
+<script type="text/javascript" src="dist/getDecimal.min.js">
 <script type="text/javascript">
-    // true
-    console.log(isEmpty(null));
-    console.log(isEmpty(undefined));
-    console.log(isEmpty(NaN));
-    console.log(isEmpty(''));
-    console.log(isEmpty('    '));
-    console.log(isEmpty({}));
-    console.log(isEmpty([]));
+    // Integer
+    console.log(getDecimal(123)); // 123
 
-    // false
-    console.log(isEmpty('null'));
-    console.log(isEmpty('undefined'));
-    console.log(isEmpty(0));
-    console.log(isEmpty(123));
-    console.log(isEmpty('  spaces '));
-    console.log(isEmpty({'1': '111', '2': '222'}));
-    console.log(isEmpty(['111', '222']));
-    console.log(isEmpty(function() {}));
-    console.log(isEmpty(true));
-    console.log(isEmpty(false));
+    // Real
+    console.log(getDecimal(123.45)); // 123.45
+    console.log(getDecimal(123.45678)); // 123.46
+    
+    // String
+    console.log(getDecimal('123')); // 123
+    console.log(getDecimal('123,45')); // 123.45
+    console.log(getDecimal('123.45678')); // 123.46
+    console.log(getDecimal(' 123 ')); // 123
+    console.log(getDecimal(' 123,45 ')); // 123.45
+    console.log(getDecimal(' 123.45 ')); // 123.45
+    
+    // Real with precision
+    console.log(getDecimal(123.45, 3)); // 123.45
+    console.log(getDecimal(123.45678, 3)); // 123.457
+
+    // String with precision
+    console.log(getDecimal('123,45', 3)); // 123.45
+    console.log(getDecimal('123.45678', 3)); // 123.457
+    console.log(getDecimal(' 123,45678 ', 3)); // 123.457
+    console.log(getDecimal(' 123.45678 ', 3)); // 123.457
 </script>
 ```
