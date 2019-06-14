@@ -1,0 +1,24 @@
+{
+  "name": "getdecimal",
+  "description": "Javascript converter of the specified string in a decimal number with a given precision",
+  "version": "1.0.0",
+  "homepage": "https://github.com/DimNS/getDecimal.js",
+  "author": "DimNS <dimns@dimns.ru>",
+  "keywords": [
+    "getDecimal",
+    "getDecimal.js",
+    "decimal",
+    "float"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DimNS/getDecimal.js.git"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^1.5.4",
+    "qunit": "^2.9.2"
+  }
+}
